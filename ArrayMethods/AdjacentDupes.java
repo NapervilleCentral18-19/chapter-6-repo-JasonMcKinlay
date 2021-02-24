@@ -1,3 +1,5 @@
+package ArrayMethods;
+
 public class AdjacentDupes
 {
    public boolean adjacentDupes(int[] arr)

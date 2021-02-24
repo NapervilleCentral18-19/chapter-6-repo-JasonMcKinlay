@@ -33,7 +33,7 @@ public class Coin
 
    /**-----------------------------------------------------------------
    *  Returns true if the current face of the coin is heads.
-   		@return boolean, true if heads
+           @return boolean, true if heads
    */
    public boolean isHeads ()
    {
@@ -42,7 +42,7 @@ public class Coin
 
    /**-----------------------------------------------------------------
    *  Returns the current face of the coin as a string.
-   		@return String
+           @return String
    */
    public String toString()
    {

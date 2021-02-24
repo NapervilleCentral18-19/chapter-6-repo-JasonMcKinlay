@@ -1,3 +1,5 @@
+package ArrayMethods;
+
 import java.util.Random;
 
 public class ReplaceEven

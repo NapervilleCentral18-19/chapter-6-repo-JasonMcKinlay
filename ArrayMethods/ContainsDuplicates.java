@@ -1,3 +1,5 @@
+package ArrayMethods;
+
 public class ContainsDuplicates
 {
    public boolean containsDuplicates(int[] arr)

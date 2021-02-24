@@ -1,3 +1,5 @@
+package ArrayMethods;
+
 public class InOrder
 {
    public boolean inOrder(int[] arr)
