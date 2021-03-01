@@ -1,3 +1,7 @@
+package ArrayMethods;
+
+package ArrayMethods;
+
  
 
 import java.util.Random;

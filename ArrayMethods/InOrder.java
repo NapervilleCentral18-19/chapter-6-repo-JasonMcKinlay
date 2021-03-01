@@ -5,8 +5,20 @@ public class InOrder
    public boolean inOrder(int[] arr)
    {
       // Assume they are in order.
-      boolean ordered = true;
-
+      //boolean ordered = true;
+      
+      int count = 0;
+      for (int num: arr) {
+          if (count != arr.length - 1) {
+              if (arr[count] >= arr[count + 1]) {
+                  return false; }
+          else {
+              return true; }
+              
+        } 
+      }
+      
+      return false;
    }
 
    public static void main(String[] args)

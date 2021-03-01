@@ -5,11 +5,20 @@ public class AdjacentDupes
    public boolean adjacentDupes(int[] arr)
    {
       // Assume no adjacent dupes.
-      boolean adjDupes = false;
+      //boolean adjDupes = false;
 
       // Loop through array, checking for duplicates
       // next to each other.
-
+      int count = 0;
+      for (int num:arr) {
+          if (count != arr.length - 1) {
+              if (arr[count] == arr[count + 1]) {
+                  return true; } 
+          else {
+              count++; }
+        }
+      } 
+      return false;
    }
 
    public static void main(String[] args)
@@ -17,7 +26,7 @@ public class AdjacentDupes
       int[] arr1 = { 1, 2, 3, 4, 4, 6, 7, 8, 9, 42 };
       int[] arr2 = { 2, 1, 3, 4, 5, 4, 7, 4, 9, 4 };
       AdjacentDupes util = new AdjacentDupes();
-
+      
       // Check if array 1 has adjacent dupes.
       if (util.adjacentDupes(arr1))
       {

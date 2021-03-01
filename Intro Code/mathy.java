@@ -40,7 +40,7 @@ public class mathy
             //random double
             numbers[i] = (int)(Math.random() * range +1);
            }
-        return new int[10];
+        return numbers;
     }
 
 
@@ -72,7 +72,7 @@ public class mathy
     {    int j = 0;
 
 
-        for( int i = 0; i<num1.length;i++)
+        for( int i = 0; i < num1.length;i++)
         {
             if (num1[i] % 2 != 0)
             {
