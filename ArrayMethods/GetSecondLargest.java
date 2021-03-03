@@ -1,6 +1,6 @@
 package ArrayMethods;
 
-package ArrayMethods;
+//package ArrayMethods;
 
  
 
@@ -11,12 +11,27 @@ public class GetSecondLargest
    public int getSecondLargest(int[] arr)
    {
       // One way to do it: Find maximum once.
-      int max = arr[0];
+      int count = 0;
+      int max = 0;
+      
+      for (int num:arr) {
+          if (count != 0) {
+              if (arr[count] > arr[count - 1]) {
+                  max = arr[count]; }
+              }
+          count++; }
 
       // 2. Find the max again, ignoring the real max.
       int oldMax = max;
-      max = arr[0];
+      count = 0;
+      for (int num:arr) {
+          if (count != 0) {
+              if (arr[count] > arr[count - 1] && arr[count] != oldMax) {
+                  max = arr[count]; }
+              }
+          count++; }
 
+      return max;
 
    }
 

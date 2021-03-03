@@ -8,6 +8,8 @@ public class MoveEvenToFront
    {
       int endOfEvens = 0;
       int temp;
+      
+      for (int i = 0; )
 
        // Even
           // Save the even number

@@ -6,9 +6,10 @@ public class ReplaceEven
 {
    public void replaceEven(int[] arr)
    {
-
-
-
+       for (int i = 0; i < arr.length - 1; i++) {
+           if (arr[i] % 2 == 0) {
+               arr[i] = 0; }
+        }
    }
 
    public static void main(String[] args)

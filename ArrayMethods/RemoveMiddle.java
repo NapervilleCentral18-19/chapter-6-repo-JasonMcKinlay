@@ -8,7 +8,19 @@ public class RemoveMiddle
    {
       int size = arr.length;
        // Size is even
-
+      if (size % 2 == 0) {
+          arr[size/2] = 0;
+          arr[size/2 - 1] = 0;
+          for (int i = size/2; i < arr.length - 1; i++) {
+              arr[i] = arr[i + 2];
+              
+          }
+          
+        }
+      else {
+          arr[size/2] = 0; }
+          
+      
          // Figure out starting point for removal
 
 
