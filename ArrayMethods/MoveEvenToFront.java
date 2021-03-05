@@ -7,9 +7,17 @@ public class MoveEvenToFront
    public void moveEvenToFront(int[] arr)
    {
       int endOfEvens = 0;
-      int temp;
+      int count = 0;
       
-      for (int i = 0; )
+      for (int i = 0; i < arr.length - 1; i++)
+      {
+          if (arr[i] % 2 == 0) {
+              int temp = arr[count];
+              arr[count] = arr[i];
+              arr[i] = temp;
+              count++;
+          }
+      }
 
        // Even
           // Save the even number
