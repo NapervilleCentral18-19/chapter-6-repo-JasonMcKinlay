@@ -16,6 +16,7 @@ comment14.target=int[]\ doubleSize(int[])
 comment14.text=\r\n\ \ \ \ \ \ \ \ Doubles\ the\ size\ of\ an\ array\r\n\ \ \ \ \ \ \ \ @param\ int\ []\r\n\ \ \ \ \ \ \ \ @return\ int\ []\ twice\ the\ size,\ with\ values\ copied\ over\r\n
 comment2.params=array
 comment2.target=mathy(int[][])
+comment2.text=\r\n\ alias\ of\ array\ passed\ in\ from\ main\r\n\ arrays\ are\ objects\ -\ changing\ square\ will\ change\ the\ array\r\n
 comment3.params=size\ range
 comment3.target=int[]\ poprandomArray(int,\ int)
 comment3.text=\r\n\ Creates\ and\ populates\ an\ array\ with\ random\ values\r\n\ @param\ size\ -\ the\ number\ of\ random\ values\ (size\ of\ array)\r\n\ @param\ range\ -\ the\ range\ of\ random\ values\ from\ 1\ to\ range\ (1,\ range)\r\n\ @return\ array\ of\ size\ populate\ with\ random\ numbers\r\n\ \r\n

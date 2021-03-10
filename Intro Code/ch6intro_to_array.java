@@ -19,7 +19,7 @@ public class ch6intro_to_array
 public static void main (String[] args)
 {
 
-/**/
+/*
         mathy useful = new mathy();
         int x = 50;
         
@@ -35,7 +35,7 @@ public static void main (String[] args)
          * advantage: will not give an out of bound error
          * limitations: cannot cange the int value in the array values
          */
-        
+/*        
         int count = 0;
         for(int s: values)
         {
@@ -74,12 +74,14 @@ public static void main (String[] args)
 
    /*
 
- /*
+ */
        //make a two dementional array
+       //  r  c row major
        int [][] table = new int [5][10];
 
-       // Load the table with values
+       // Load the table with values .length = rows
        for (int row=0; row < table.length; row++)
+          //[row].length = columns
           for (int col=0; col < table[row].length; col++)
              table[row][col] = row * 10 + col;
 
@@ -95,11 +97,14 @@ public static void main (String[] args)
 
     // make a 2d array with an iniitalizer list.
     //print the length of row and col
-/*
+/**/
+
+    mathy useful = new mathy();
     int [][] scores = { {1,2,3},//6
                         {2,2,3},//7
                         {3,2,3},//8
                         {4,2,3}    };//9
+                        
 
     //how many columns
     System.out.println(scores[0].length+"col");
@@ -107,10 +112,12 @@ public static void main (String[] args)
     System.out.println(scores.length+"row");
 
     //sum entire 2D array
-    System.out.print("The sum of this array is" );
+    int sum = mathy.sum2DArray(scores);
+    System.out.print("The sum of this array is" + sum);
 
     //sum a row of 2D array
-    System.out.print("The sum of row "));
+    int rsum = useful.sumOneRow2DArray(1);
+    System.out.print("The sum of row " + rsum);
 
 
 
