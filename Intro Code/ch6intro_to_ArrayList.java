@@ -21,8 +21,9 @@ public class ch6intro_to_ArrayList
 public static void main (String[] args)
 {
     //ArrayList notes
-/*
+/**/
     // <> indicates the type of ArrayList
+    //<type of object> & only use objects
     ArrayList <String> farm = new ArrayList<>();
 
     farm.add("cow");farm.add("chicken");
@@ -42,7 +43,7 @@ public static void main (String[] args)
     System.out.println(farm);
 
     int count = 0;
-    for (int i = 0; i<farm.size();i++)
+    for (int i = farm.size() - 1; i > -1; i--)
     {
         if(farm.get(i).equals("chicken"))
             count++;
@@ -50,10 +51,10 @@ public static void main (String[] args)
         if (farm.get(i).equals("chicken"))
             farm.remove(i);
 
-
+        
     }
 
-    System.out.println("There are " + count+ " chickens");
+    System.out.println("There are " + count + " chickens");
 
     System.out.println(farm);
 
@@ -63,17 +64,17 @@ public static void main (String[] args)
 
     ArrayList <Integer> list1 = new ArrayList<>();
 
-    ArrayList <CD> mycds = new ArrayList<>();
+    //ArrayList <CD> mycds = new ArrayList<>();
 
     //for(int i = 0; i<3; i++)
     //{
-
+/*
     mycds.add(new CD("Wilco","Jeff Tweety",12.99,16);
     mycds.add(new CD("Throwup","Britiny Spears",12.99,16);
     mycds.add(new CD("Oxygen","CatFish and the Bottlemen",12.99,16);
 
     System.out.print(mycds);
-
+*/
     //}
 
 }// end of main

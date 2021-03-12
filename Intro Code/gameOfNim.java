@@ -15,22 +15,57 @@ public class gameOfNim
         Scanner keyboard = new Scanner(System.in);
         
         int[] stones = {3, 5, 8};
-        displayNim(stones);                  
+        //displayNim(stones);                  
         
         boolean runGame = true;
-        int total = 0;
+        int pile, amt, total;
+        int pCount = 1; //if odd, player 1's turn, if even, player 2's turn
+        
         while (runGame) {
             
+            total = 0;
+            displayNim(stones);
+            System.out.println("--------\n");
             
-            
-            
-            for (int i = 0; i < stones.length - 1; i++) {
-                total += stones[i];
-                if (total == 1) {
-                    runGame = false; }
+            if (pCount % 2 != 0) {
+                System.out.println("P1's turn: Which pile do you want to take from? ");
+                pile = keyboard.nextInt();
+                System.out.println("How many stones do you want to take? ");
+                amt = keyboard.nextInt();
                 
+                if (amt > stones[pile - 1]) {
+                    System.out.println("Error, took too many stones"); }
+                else {
+                    stones[pile - 1] -= amt; }
             }
-        }
+            
+            else {
+                System.out.println("P2's turn: Which pile do you want to take from? ");
+                pile = keyboard.nextInt();
+                System.out.println("How many stones do you want to take? ");
+                amt = keyboard.nextInt();
+                
+                if (amt > stones[pile - 1]) {
+                    System.out.println("Error, took too many stones");
+                }
+                else {
+                    stones[pile - 1] -= amt; }
+                }
+                
+            
+            for (int i = 0; i < stones.length; i++) {
+                total += stones[i]; }
+            if (total <= 1) {
+                runGame = false; }
+                
+            pCount++;
+    }
+    
+    pCount++;
+    if (pCount % 2 != 0) {
+        System.out.println("Player 1 wins!"); }
+    else {
+        System.out.println("Player 2 wins!"); }
         
         
         
