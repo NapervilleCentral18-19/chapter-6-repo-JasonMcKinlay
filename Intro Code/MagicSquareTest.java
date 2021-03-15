@@ -22,7 +22,7 @@ public class MagicSquareTest
     // make a 2d array with an iniitalizer list.
     //If you test this and it not Magic your waving your wand wrong
 
-    int [][] square1 = { {16,3, 2,13},
+    int [][] square1 = {{16,3, 2,13},
                         {5,10,11, 8},
                         {9, 6, 7,12},
                         {4,15,14, 1}  };
@@ -56,6 +56,8 @@ public class MagicSquareTest
 
     //change the 2D array and retest
         useful.setMagicSquare(square3);
+        
+        //System.out.println(useful);
 
         if (useful.isMagic())
                 System.out.println("It's MAGIC!! With a sum of "+ useful.getMagicNum());

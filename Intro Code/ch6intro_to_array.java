@@ -82,8 +82,10 @@ public static void main (String[] args)
        // Load the table with values .length = rows
        for (int row=0; row < table.length; row++)
           //[row].length = columns
-          for (int col=0; col < table[row].length; col++)
+          for (int col=0; col < table[row].length; col++) {
              table[row][col] = row * 10 + col;
+             }
+             
 
        //print the table
         for (int row=0; row < table.length; row++)
@@ -97,7 +99,7 @@ public static void main (String[] args)
 
     // make a 2d array with an iniitalizer list.
     //print the length of row and col
-/**/
+/*
 
     mathy useful = new mathy();
     int [][] scores = { {1,2,3},//6
