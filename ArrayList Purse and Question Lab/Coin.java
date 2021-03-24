@@ -1,57 +1,91 @@
 /**
 *  Edit class to fullfill Purse Requirements
 *
-*  Represents a coin with two sides that can be flipped.
+*  Jason McKinlay
+*  3/19/21
+*  Coin class
 */
 
 import java.util.Random;
 
 public class Coin
 {
-   private final int HEADS = 0;
-   private final int TAILS = 1;
-
-   private int face;
-   private double amount;
+   private double value;
    private char type;
 
    /**-----------------------------------------------------------------
-   *  Sets up the coin by flipping it initially.
+   *  Constructor for coin
    */
-   public Coin ()
+   public Coin (char type)
    {
-      flip();
+      this.type = type;
+      if (type == 'P') {
+          value = 0.01; }
+          
+      if (type == 'N') {
+          value = 0.05; }
+          
+      if (type == 'D') {
+          value = 0.1; }
+          
+      if (type == 'Q') {
+          value = 0.25; }
+   }
+   
+   /**-----------------------------------------------------------------
+   *  Overloaded constructor for coin
+   */
+   public Coin (double value)
+   {
+      this.value = value;
+      if (value == 0.01) {
+          type = 'P'; }
+          
+      if (value == 0.05) {
+          type = 'N'; }
+          
+      if (value == 0.1) {
+          type = 'D'; }
+          
+      if (value == 0.25) {
+          type = 'Q'; }
    }
 
    /**-----------------------------------------------------------------
-   *  Flips the coin by randomly choosing a face value.
-   */
-   public void flip ()
+    * getValue() - returns value of Coin
+    * @return double of value
+    */
+   public double getValue()
    {
-      face = (int) (Math.random() * 2);
+       return value;
    }
-
+   
    /**-----------------------------------------------------------------
-   *  Returns true if the current face of the coin is heads.
-           @return boolean, true if heads
-   */
-   public boolean isHeads ()
+    * getType() - returns type of Coin
+    * @return char of type
+    */
+   public char getType()
    {
-      return (face == HEADS);
+       return type;
    }
-
+   
    /**-----------------------------------------------------------------
-   *  Returns the current face of the coin as a string.
+   *  Returns the type of coin as a String and the value
            @return String
    */
    public String toString()
    {
-      String faceName;
-      if (face == HEADS)
-         faceName = "Heads";
-      else
-         faceName = "Tails";
-
-      return faceName;
+      if (type == 'P') {
+          return "Penny\t" + value;
+      }
+      else if (type == 'N') {
+          return "Nickel\t" + value;
+      }
+      else if (type == 'D') {
+          return "Dime\t" + value;
+      }
+      else {
+          return "Quarter\t" + value;
+      }
    }
 }

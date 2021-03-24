@@ -50,7 +50,7 @@ public class Address implements Comparable
 
           }
 
-          int factor = 0;
+          int factor = 31; //use a prime number
 
           for (int i = 0; i<city.length(); i++)
                 factor +=city.charAt(i);

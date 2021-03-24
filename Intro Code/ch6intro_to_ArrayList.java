@@ -69,9 +69,33 @@ public static void main (String[] args)
     String obj = farm.set(2, "son");
 
     System.out.println(farm);
+*/
+    Scanner in = new Scanner(System.in);
+    ArrayList <Integer> numbers = new ArrayList<>();
+    int num;
+    int j;
+    for (int i = 0; i<10; i++)
+    {
+        System.out.println ("Enter a Integer");
+        num = in.nextInt();
+        if (numbers.size() == 0) {
+            numbers.add(num);
+        }
+        else {
+            j = 0;
+            while (j < numbers.size() && num > numbers.get(j)) {
+                j++;
+            }
+            numbers.add(j, num);
+        }
+        
+       // add to arrayList in order        
+    }
+    System.out.print(numbers);
 
+    /*
     ArrayList <String> list = new ArrayList<>();
-    */
+    
     //ArrayList <int> list1 = new ArrayList<>();// no primitive data types
     
     ArrayList <Integer> list1 = new ArrayList<>();

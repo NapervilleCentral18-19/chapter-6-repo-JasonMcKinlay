@@ -13,7 +13,7 @@ public class Addressdata
    {
 
 
-	   //Address [] contacts = new Address [10];
+       //Address [] contacts = new Address [10];
 Address school = new Address ("800 Lancaster Ave.", "Villanova","PA", 19085);
 Address rHome = new Address ("4 Privet Drive", "Lynchburg","OH",60123);
 Address mHome = new Address ("1203 Main Street", "Euclid", "OH",60156);
@@ -25,45 +25,45 @@ Address Ned   = new Address ("740 Evergreen Terrace", "Springfield", "US", 78204
 Address Ed   = new Address ("9764 Jeopardy Lane","Chicago", "IL", 60678);
 Address Tom   = new Address ("916 Elm Street","Flossmoor", "IL", 60148);
 
-	   Address [] contacts = {school,rHome,mHome,dj,ken,Homes,Bob,Ned,Ed,Tom};
+       Address [] contacts = {school,rHome,mHome,dj,ken,Homes,Bob,Ned,Ed,Tom};
 
-	   //Sort the Addresses
+       //Sort the Addresses
 
 
 
-	  //String hash1 = contacts[3].hash();
-/*	  int hash1 = contacts[3].hash();
-	  System.out.println(hash1);
-	  int hash2 = contacts[2].hash();
-	  System.out.println(hash2);
+      //String hash1 = contacts[3].hash();
+      int hash1 = contacts[3].hash();
+      System.out.println(hash1);
+      int hash2 = contacts[2].hash();
+      System.out.println(hash2);
 /**/
-	  for (Address me: contacts)
-	  {
-	  	System.out.print(me.hash());
-	  	System.out.println("-"+me.hash()%30);
-	}
+      for (Address me: contacts)
+      {
+          System.out.print(me.hash());
+          System.out.println("-"+me.hash()%20);
+    }
 
 
-	  Address [] hash_array = new Address[3*contacts.length];
+      Address [] hash_array = new Address[2*contacts.length];
 
-	  for( int i = 0; i<contacts.length;i++)
-	  {
-		  hash_array[contacts[i].hash()%30] = contacts[i];
+      for( int i = 0; i<contacts.length;i++)
+      {
+          hash_array[contacts[i].hash()%20] = contacts[i];
 
-	  }
+      }
 
-	  for (Address me2 :hash_array)
-	  System.out.println(me2);
+      for (Address me2 :hash_array)
+      System.out.println(me2);
 
 
 /*
-		int hash2 = 0;
-	   for( int i = 0; i<hash1.length();i++)
-	   {
-	   		hash2 += hash1.charAt(i);
-		}
+        int hash2 = 0;
+       for( int i = 0; i<hash1.length();i++)
+       {
+               hash2 += hash1.charAt(i);
+        }
 
-		System.out.print(hash2%20);
+        System.out.print(hash2%20);
 
 
 */

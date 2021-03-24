@@ -3,32 +3,51 @@
  * Write a description of class Store here.
  *
  * @author Jason McKinlay
- * @version 3/17/21
+ * @version 3/19/21
  * Store Class
  */
+
+import java.util.*;
 public class Store
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    
+    ArrayList <Customer> customers;
 
     /**
      * Constructor for objects of class Store
      */
     public Store()
     {
-        // initialise instance variables
-        x = 0;
+        customers = new ArrayList<Customer>();
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * addSales() - adds a customer and the amount they purchased to the ArrayList
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param String of customer's name, double of amount of $ they spent
      */
-    public int sampleMethod(int y)
+    public void addSales(String customerName, double amount)
     {
-        // put your code here
-        return x + y;
+        Customer customer = new Customer(customerName, amount);
+        customers.add(customer);
+    }
+    
+    /**
+     * nameOfBestCustomer() - returns the name of whoever purchased the most
+     * @return String of customer's name
+     */
+    public String nameOfBestCustomer() 
+    {
+        double max = 0; //will be set to whichever customer has the max amount of purchases
+        String bestCustomer = "";
+        
+        for (Customer person:customers) {
+            if (person.getAmount() > max) {
+                bestCustomer = person.getName();
+                max = person.getAmount();
+            }
+        }
+        
+        return bestCustomer;
     }
 }
